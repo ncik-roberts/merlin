@@ -150,3 +150,11 @@
     "value": <syntax error>,
     "notifications": []
   }
+
+  $ $MERLIN single type-expression -expression "f x" -position 10:13 \
+  > -filename test.ml < test.ml
+  {
+    "class": "return",
+    "value": "File \"src/ocaml/typing/typecore.ml\", line 3144, characters 31-37: Assertion failed",
+    "notifications": []
+  }
